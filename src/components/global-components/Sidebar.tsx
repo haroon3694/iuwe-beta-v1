@@ -13,9 +13,9 @@ const Sidebar = () => {
         <img src={cross} className="w-[40px]" onClick={() => setSidebarToggle(false)} alt="" />
         </div>
         <div className="flex flex-col justify-center items-center mt-[200px] gap-6">
-            <Link to='/case-studies'><h1 className="text-[40px] font-[500] text-white">Case Studies</h1></Link>
-            <Link to='/about'><h1 className="text-[40px] font-[500] text-white">About Us</h1></Link>
-            <Link to='/contact'><h1 className="text-[40px] font-[500] text-white">Contact Us</h1></Link>
+            <Link onClick={() => setSidebarToggle(false)} to='/case-studies'><h1 className="text-[40px] font-[500] text-white">Case Studies</h1></Link>
+            <Link onClick={() => setSidebarToggle(false)} to='/about'><h1 className="text-[40px] font-[500] text-white">About Us</h1></Link>
+            <Link onClick={() => setSidebarToggle(false)} to='/contact'><h1 className="text-[40px] font-[500] text-white">Contact Us</h1></Link>
         </div>
     </div>
   )
