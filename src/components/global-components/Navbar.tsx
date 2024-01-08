@@ -34,30 +34,38 @@ const Navbar = () => {
     const [_sidebarToggle, setSidebarToggle] = useRecoilState(sidebarToggleAtom)
 
     const [navBg, setNavBg] = useState(false);
-  
-    const changeNavBg = () =>
-    {
-     window.scrollY >= 650 ? setNavBg(true) : setNavBg(false);
+
+    const changeNavBg = () => {
+        window.scrollY >= 650 ? setNavBg(true) : setNavBg(false);
     }
-  
+
     window.addEventListener('scroll', changeNavBg);
 
     return (
-        <div className={`w-full fixed flex justify-between top-o ${navBg ? 'bg-black' : 'bg-transparent'} transition-all duration-100 ease-in-out px-6 md:px-[4rem] lg:px-[8rem] py-6 z-[100] pt-8`}>
-            <div className="w-fit hidden md:block">
-                <Link to={`/`}> 
-                    <img src={logo} className="w-[120px]" alt="" />
-                </Link>
+        <>
+            <div className={`w-full hidden md:flex fixed justify-between top-o ${navBg ? 'bg-black' : 'bg-transparent'} transition-all duration-100 ease-in-out px-6 md:px-[4rem] lg:px-[8rem] py-6 z-[100] pt-8`}>
+                <div className="w-fit">
+                    <Link to={`/`}>
+                        <img src={logo} className="w-[120px]" alt="" />
+                    </Link>
+                </div>
+                <div className="w-fit gap-16 items-center">
+                    {
+                        navData?.routes?.map((data) => (
+                            <Link to={data?.route} className=""><p className={`text-[14px] text-gray-500 hover:text-white font-manrope font-[700] ${pathname == data?.route ? 'font-[] text-white' : ''}`}>{data?.title}</p></Link>
+                        ))
+                    }
+                </div>
+                <div className="w-full flex justify-end md:hidden"><img src={menu} onClick={() => setSidebarToggle(true)} className="w-[35px]" alt="" /></div>
             </div>
-            <div className="w-fit gap-16 items-center hidden md:flex">
-                {
-                    navData?.routes?.map((data) => (
-                        <Link to={data?.route} className=""><p className={`text-[14px] text-gray-500 hover:text-white font-manrope font-[700] ${pathname == data?.route ? 'font-[] text-white' : ''}`}>{data?.title}</p></Link>
-                    ))
-                }
+            <div className={`w-full flex md:hidden fixed justify-between top-o bg-transparent transition-all duration-100 ease-in-out px-6 md:px-[4rem] lg:px-[8rem] py-6 z-[100] pt-8`}>
+                <div className="w-full flex justify-end md:hidden">
+                    <span className="rounded-full bg-black p-1">
+                        <img src={menu} onClick={() => setSidebarToggle(true)} className="w-[35px]" alt="" />
+                    </span>
+                </div>
             </div>
-            <div className="w-full flex justify-end md:hidden"><img src={menu} onClick={() => setSidebarToggle(true)} className="w-[35px]" alt="" /></div>
-        </div>
+        </>
     )
 }
 
