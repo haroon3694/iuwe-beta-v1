@@ -22,7 +22,7 @@ const Preloader = () => {
             }
         };
 
-        const interval = setInterval(updateProgress, 700); // Interval to update progress
+        const interval = setInterval(updateProgress, 600); // Interval to update progress
 
         return () => clearInterval(interval);
     }, [increments]);
