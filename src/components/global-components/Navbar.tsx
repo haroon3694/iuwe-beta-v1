@@ -60,6 +60,11 @@ const Navbar = () => {
 
             {/* mobile hamburger */}
             <div className={`w-full flex md:hidden fixed justify-between top-o bg-transparent transition-all duration-100 ease-in-out px-6 md:px-[4rem] lg:px-[8rem] py-6 z-[100] pt-8`}>
+                <div className="w-fit">
+                    <Link to={`/`}>
+                        <img src={logo} className="w-[120px]" alt="" />
+                    </Link>
+                </div>
                 <div className="w-full flex justify-end md:hidden">
                     <span className="rounded-full bg-black p-1">
                         <img src={menu} onClick={() => setSidebarToggle(true)} className="w-[35px]" alt="" />

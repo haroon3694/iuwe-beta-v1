@@ -2,7 +2,7 @@ import logo from '../../assets/images/logo_white.svg'
 
 const Footer = () => {
   return (
-    <div className='w-full px-8 lg:px-[10vh] xl:px-[20vh] pb-[5rem] md:pb-[7rem]'>
+    <div className='w-full px-8 lg:px-[10vh] xl:px-[20vh] pb-8 md:pb-[7rem]'>
         <div className='w-full rounded-[15px] bg-[color:var(--primary-color)]'>
             <div className='w-full flex justify-between items-end p-6 pt-[7rem]'>
                 <div className='w-fit flex flex-col text-white'>

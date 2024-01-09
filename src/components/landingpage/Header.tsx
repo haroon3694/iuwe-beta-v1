@@ -8,8 +8,8 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title, backgroundColor, textColor }) => {
     return (
-        <div className={`w-full bg-[${backgroundColor}] col-start-1 row-end-2 rounded-[15px] p-10`}>
-            <h1 className={`text-${textColor} text-3xl font-[600] font-montserat`}>{title}</h1>
+        <div className={`w-full bg-[${backgroundColor}] col-start-1 row-end-2 rounded-[15px] px-10 py-8 `}>
+            <h1 className={`text-${textColor} text-4xl font-[600] font-montserat`}>{title}</h1>
         </div>
     )
 }
