@@ -3,7 +3,7 @@ const AboutSection = () => {
         <div className='w-full px-8 lg:px-[10vh] xl:px-[20vh] pt-[5rem] sm:pt-[16rem] md:pt-[39rem] lg:pt-[5rem] xl:pt-[8rem] 2xl:pt-[10rem] pb-6'>
             <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-6'>
                 <div className="flex justify-center items-center">
-                    <div className={`w-full bg-[color:var(--primary-color)] flex justify-start items-center rounded-[15px] p-10`}>
+                    <div className={`w-full bg-[color:var(--primary-color)] h-full flex justify-start items-center rounded-[15px] p-10`}>
                         <h1 className={`text-white text-3xl font-[600] font-montserat`}>About Us</h1>
                     </div>
                 </div>
