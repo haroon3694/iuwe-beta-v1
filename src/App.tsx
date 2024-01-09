@@ -15,13 +15,11 @@ function App() {
       <Preloader />
       {pathname === '/under-dev' ? null : <Navbar />}
       <Sidebar />
-      <div className="">
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/under-dev" element={<UnderDev />} />
-          <Route path="*" element={<Navigate to="/under-dev" replace />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/under-dev" element={<UnderDev />} />
+        <Route path="*" element={<Navigate to="/under-dev" replace />} />
+      </Routes>
       <Footer />
     </div>
   )
