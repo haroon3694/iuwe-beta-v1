@@ -8,28 +8,21 @@ import Preloader from "./components/global-components/Preloader"
 
 function App() {
 
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   return (
     <div className='relative'>
       <Preloader />
-      <>
-        {
-          location.pathname === '/under-dev' ?
-            null
-            :
-            <Navbar />
-        }
-        <Sidebar />
-        <div className="">
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/under-dev" element={<UnderDev />} />
-            <Route path="*" element={<Navigate to="/under-dev" replace />} />
-          </Routes>
-        </div>
-        <Footer />
-      </>
+      {pathname === '/under-dev' ? null : <Navbar />}
+      <Sidebar />
+      <div className="">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/under-dev" element={<UnderDev />} />
+          <Route path="*" element={<Navigate to="/under-dev" replace />} />
+        </Routes>
+      </div>
+      <Footer />
     </div>
   )
 }
