@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 
 const Sidebar = () => {
 
-    const [sidebarToggle, setSidebarToggle] = useRecoilState(sidebarToggleAtom)
+    const [sidebarToggle, setSidebarToggle] = useRecoilState<boolean>(sidebarToggleAtom)
 
   return (
       <div className={`block md:hidden translate-x-1 bg-[color:var(--primary-color)] fixed right-0 z-[100] transition-all duration-150 rounded-l-[15px] ease-in-out ${sidebarToggle ? 'w-[80vw] h-screen' : 'w-0 h-0 overflow-hidden'}`}>

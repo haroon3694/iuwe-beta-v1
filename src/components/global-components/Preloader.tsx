@@ -2,16 +2,16 @@ import { useEffect, useState } from 'react'
 
 const Preloader = () => {
 
-    const [progress, setProgress] = useState(0);
-    const [progressEnd, setProgressEnd] = useState(false);
+    const [progress, setProgress] = useState<number>(0);
+    const [progressEnd, setProgressEnd] = useState<boolean>(false);
 
-    const increments = [20, 40, 60];
+    const increments: number[] = [20, 40, 60];
 
     useEffect(() => {
-        const shuffledIncrements = shuffleArray(increments);
+        const shuffledIncrements: number[] = shuffleArray(increments);
 
         let counter = 0;
-        let interval: any;
+        let interval: number;
 
         const updateProgress = () => {
             if (counter < shuffledIncrements.length) {
@@ -33,10 +33,10 @@ const Preloader = () => {
     }, [increments, progress]);
 
 
-    const shuffleArray = (array: any[]) => {
+    const shuffleArray = (array: number[]) => {
         let currentIndex = array.length,
-            temporaryValue,
-            randomIndex;
+            temporaryValue: number,
+            randomIndex: number;
 
         while (currentIndex !== 0) {
             randomIndex = Math.floor(Math.random() * currentIndex);

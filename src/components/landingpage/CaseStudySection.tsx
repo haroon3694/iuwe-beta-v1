@@ -29,6 +29,8 @@ const CaseStudySection = () => {
     return (
         <div className="w-full bg-black pt-5 lg:pt-16 pb-6 px-8 lg:px-[10vh] xl:px-[20vh]">
             <Header title="Case Studies" backgroundColor="color:var(--primary-color)" textColor="white" />
+
+            {/* mobile */}
             <div className="grid lg:hidden grid-cols-1 grid-rows-3 gap-6 mt-6">
                 {
                     caseStudyData?.studies?.map((data, i) => (
@@ -48,6 +50,8 @@ const CaseStudySection = () => {
                     ))
                 }
             </div>
+
+            {/* desktop */}
             <div className="hidden lg:grid grid-cols-2 md:grid-rows-2 gap-6 mt-6">
                 {
                     caseStudyData?.studies?.map((data, i) => (
