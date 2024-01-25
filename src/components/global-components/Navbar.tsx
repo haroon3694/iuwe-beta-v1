@@ -4,10 +4,18 @@ import menu from '../../assets/icons/menu.svg'
 import { useState } from "react";
 import { useRecoilState } from "recoil";
 import sidebarToggleAtom from "../../recoil/sidebarToggleAtom";
+import { Link as ScrollLink,  animateScroll as scroll } from 'react-scroll'
 
 const Navbar = () => {
 
     const { pathname } = useLocation();
+
+    const scrollToTop = () => {
+        scroll.scrollToTop({
+          duration: 500,
+          smooth: true,
+        });
+      };
 
     const navData = {
         logoText: 'iuwe.',
@@ -15,17 +23,20 @@ const Navbar = () => {
             {
                 id: 0,
                 title: 'Case Studies',
-                route: '/case-studies'
+                route: '/case-studies',
+                scroll_link: 'case-studies',
             },
             {
                 id: 1,
-                title: 'About Us',
-                route: '/about'
+                title: 'Services',
+                route: '/about',
+                scroll_link: 'services',
             },
             {
                 id: 2,
                 title: 'Contact Us',
-                route: '/contact'
+                route: '/contact',
+                scroll_link: 'contact',
             },
         ],
     };
@@ -45,14 +56,14 @@ const Navbar = () => {
             {/* desktop navbar */}
             <div className={`w-full hidden md:flex fixed justify-between top-o ${navBg ? 'bg-black' : 'bg-transparent'} transition-all duration-100 ease-in-out px-6 md:px-[4rem] lg:px-[8rem] py-6 z-[100] pt-8`}>
                 <div className="w-fit">
-                    <Link to={`/`}>
+                    <Link to={`/`} onClick={scrollToTop}>
                         <img src={logo} className="w-[120px]" alt="" />
                     </Link>
                 </div>
                 <div className="w-fit flex gap-16 items-center">
                     {
                         navData?.routes?.map((data) => (
-                            <Link to={data?.route} className=""><p className={`text-[14px] text-gray-500 hover:text-white font-manrope font-[700] ${pathname == data?.route ? 'font-[] text-white' : ''}`}>{data?.title}</p></Link>
+                            <ScrollLink to={data?.scroll_link} smooth={true} duration={500} className=""><p className={`text-[14px] text-gray-500 hover:text-white font-manrope font-[700] ${pathname == data?.route ? 'font-[] text-white' : ''}`}>{data?.title}</p></ScrollLink>
                         ))
                     }
                 </div>
