@@ -57,13 +57,13 @@ const Navbar = () => {
             <div className={`w-full hidden md:flex fixed justify-between top-o ${navBg ? 'bg-black' : 'bg-transparent'} transition-all duration-100 ease-in-out px-6 md:px-[4rem] lg:px-[8rem] py-6 z-[100] pt-8`}>
                 <div className="w-fit">
                     <Link to={`/`} onClick={scrollToTop}>
-                        <img src={logo} className="w-[120px]" alt="" />
+                        <img src={logo} className="w-[120px] cursor-pointer" alt="" />
                     </Link>
                 </div>
                 <div className="w-fit flex gap-16 items-center">
                     {
                         navData?.routes?.map((data) => (
-                            <ScrollLink to={data?.scroll_link} smooth={true} duration={500} className=""><p className={`text-[14px] text-gray-500 hover:text-white font-manrope font-[700] ${pathname == data?.route ? 'font-[] text-white' : ''}`}>{data?.title}</p></ScrollLink>
+                            <ScrollLink to={data?.scroll_link} smooth={true} duration={500} className="cursor-pointer"><p className={`text-[14px] text-gray-500 hover:text-white font-manrope font-[700] ${pathname == data?.route ? 'font-[] text-white' : ''}`}>{data?.title}</p></ScrollLink>
                         ))
                     }
                 </div>
