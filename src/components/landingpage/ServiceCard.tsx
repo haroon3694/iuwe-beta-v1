@@ -8,7 +8,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title }) => {
     return (
         <div className="w-full aspect-square p-3">
             <div className="w-full h-full flex flex-col justify-start items-center p-6 bg-white rounded-[15px]">
-                <h1 className="text-[30px] font-[600] leading-[36px] text-left text-wrap">{title}</h1>
+                <h1 className="text-[45px] font-[600] leading-[44px] text-left text-wrap">{title}</h1>
             </div>
         </div>
     )
