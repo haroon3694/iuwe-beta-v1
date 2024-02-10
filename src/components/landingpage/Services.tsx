@@ -26,7 +26,7 @@ const Services = () => {
             },
             {
                 id: 4,
-                title: `Product Photography / Videography`,
+                title: `Product Photography Videography`,
             },
             {
                 id: 5,
@@ -48,7 +48,7 @@ const Services = () => {
         arrows: false,
         autoplay: true,
         autoplaySpeed: 2000,
-        pauseOnHover: false,
+        pauseOnHover: true,
         responsive: [
             {
                 breakpoint: 480,
@@ -91,9 +91,10 @@ const Services = () => {
     };
 
     return (
-        <Element name='services' className="bg-black h-auto md:h-[40vh] lg:h-[50vh] xl:h-[40vh] pt-5 xl:pt-0 px-8 lg:px-[10vh] xl:px-[20vh]">
+        <Element name='services' className="bg-black pt-5 xl:pt-0 px-8 lg:px-[10vh] xl:px-[20vh] relative">
+        {/* <Element name='services' className="bg-black h-auto md:h-[40vh] lg:h-[50vh] xl:h-[40vh] pt-5 xl:pt-0 px-8 lg:px-[10vh] xl:px-[20vh]"> */}
             <Header title={servicesData?.title} backgroundColor="color:var(--primary-color)" textColor="white" />
-            <div className="min-w-[100vw]">
+            <div className="min-w-[100vw] relative z-10">
                 <Slider className="mt-3 w-full" {...settings}>
                     {
                         servicesData?.services?.map((data) => (
@@ -102,6 +103,7 @@ const Services = () => {
                     }
                 </Slider>
             </div>
+            <div className="h-[30%] w-full bg-[#fff] z-0 absolute bottom-0 left-0" />
         </Element>
     )
 }
