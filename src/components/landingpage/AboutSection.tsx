@@ -16,7 +16,7 @@ const AboutSection = () => {
                 <div className="w-full md:max-w-[50%] flex flex-col gap-6">
                     <Header title={aboutData?.title} backgroundColor="color:var(--primary-color)" textColor="white" />
                     <div className='w-full bg-[color:var(--secondary-color)] rounded-[15px] p-10 h-full'>
-                        <p className='font-[500] text-[18px] text-justify'>{aboutData?.content}</p>
+                        <p className='font-[500] text-[18px] w-[85%]'>{aboutData?.content}</p>
                     </div>
                 </div>
                 <div className="w-full md:max-w-[50%]">
