@@ -51,24 +51,24 @@ const Services = () => {
         pauseOnHover: true,
         responsive: [
             {
-                breakpoint: 480,
+                breakpoint: 450,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
                 }
             },
             {
-                breakpoint: 800,
+                breakpoint: 700,
                 settings: {
                     slidesToShow: 2,
                 },
             },
-            {
-                breakpoint: 900,
-                settings: {
-                    slidesToShow: 3,
-                },
-            },
+            // {
+            //     breakpoint: 900,
+            //     settings: {
+            //         slidesToShow: 3,
+            //     },
+            // },
             {
                 breakpoint: 1150,
                 settings: {
@@ -91,10 +91,10 @@ const Services = () => {
     };
 
     return (
-        <Element name='services' className="bg-black pt-5 xl:pt-0 px-8 lg:px-[10vh] xl:px-[20vh] relative">
+        <Element name='services' className="bg-black pt-5 xl:pt-0 px-8 lg:px-[10vh] xl:px-[20vh] relative overflow-hidden">
         {/* <Element name='services' className="bg-black h-auto md:h-[40vh] lg:h-[50vh] xl:h-[40vh] pt-5 xl:pt-0 px-8 lg:px-[10vh] xl:px-[20vh]"> */}
             <Header title={servicesData?.title} backgroundColor="color:var(--primary-color)" textColor="white" />
-            <div className="min-w-[100vw] relative z-10">
+            <div className="min-w-[90vw] sm:min-w-[100vw] relative z-10">
                 <Slider className="mt-3 w-full" {...settings}>
                     {
                         servicesData?.services?.map((data) => (

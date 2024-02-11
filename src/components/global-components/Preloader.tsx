@@ -51,7 +51,7 @@ const Preloader = () => {
     };
 
     return (
-        <div className={`w-full h-screen fixed z-[500] ${!progressEnd ? '' : '-translate-y-[105vh]'} transition-all duration-300 ease-out flex items-end bg-black pb-[20vh] md:pb-[100px] px-10`}>
+        <div className={`w-full h-screen fixed z-[500] ${!progressEnd ? '' : '-translate-y-[105vh]'} transition-all duration-300 ease-out flex items-end bg-black pb-[20vh] md:pb-[100px] px-5 md:px-10`}>
             <div className="w-full flex flex-col">
                 <h1 className='text-[120px] text-white'>{progress}%</h1>
                 <div className="h-2 bg-white rounded-[3px] transition-all duration-150 ease-in-out" style={{ width: `${progress}%` }}>

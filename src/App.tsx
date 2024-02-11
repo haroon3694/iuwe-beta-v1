@@ -13,7 +13,7 @@ function App() {
   const { pathname } = useLocation();
 
   return (
-    <div className='relative overflow-hidden'>
+    <div className='relative'>
       <Preloader />
       {pathname === '/under-dev' ? null : <Navbar />}
       <Sidebar />

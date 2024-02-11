@@ -29,15 +29,15 @@ const Footer = () => {
   return (
     <div className='w-full px-8 lg:px-[10vh] xl:px-[20vh] pb-8 md:pb-[7rem]'>
         <div className='w-full rounded-[15px] bg-[color:var(--primary-color)]'>
-            <div className='w-full flex justify-between items-end p-6 pt-[7rem]'>
+            <div className='w-full flex gap-8 md:gap-0 justify-between md:items-end px-8 md:p-6 py-[2rem] md:pt-[7rem]'>
                 <div className='w-fit flex flex-col text-white'>
-                    <img src={logo} className="w-[90px]" alt="" />
+                    <img src={logo} className="w-[80px] md:w-[90px]" alt="" />
                     <p className="text-[12px] mt-2">All rights reserved @2023</p>
                 </div>
-                <div className='w-fit flex gap-6 items-end'>
+                <div className='w-fit flex gap-8 md:gap-6 items-end'>
                     {
                         socialMedia.map((data) => (
-                            <span key={data?.id} className='w-[40px] flex justify-end items-center' onClick={() => onLinkClick(data?.link)}>
+                            <span key={data?.id} className='md:w-[40px] flex justify-end items-center' onClick={() => onLinkClick(data?.link)}>
                                 <img src={data?.icon} className='w-[25px] hover:w-[30px] transition-all duration-200 ease-in-out' alt="" />
                             </span>
                         ))

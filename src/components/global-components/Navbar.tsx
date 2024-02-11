@@ -4,7 +4,7 @@ import menu from '../../assets/icons/menu.svg'
 import { useState } from "react";
 import { useRecoilState } from "recoil";
 import sidebarToggleAtom from "../../recoil/sidebarToggleAtom";
-import { Link as ScrollLink,  animateScroll as scroll } from 'react-scroll'
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll'
 
 const Navbar = () => {
 
@@ -12,10 +12,10 @@ const Navbar = () => {
 
     const scrollToTop = () => {
         scroll.scrollToTop({
-          duration: 500,
-          smooth: true,
+            duration: 500,
+            smooth: true,
         });
-      };
+    };
 
     const navData = {
         logoText: 'iuwe.',
@@ -54,7 +54,7 @@ const Navbar = () => {
     return (
         <>
             {/* desktop navbar */}
-            <div className={`w-full hidden md:flex fixed justify-between top-o ${navBg ? 'bg-black' : 'bg-transparent'} transition-all duration-100 ease-in-out px-6 md:px-[4rem] lg:px-[8rem] py-6 z-[100] pt-8`}>
+            <div className={`w-full hidden md:flex fixed justify-between top-o ${navBg ? ' bg-[color:var(--primary-color)]' : 'bg-transparent'} transition-all duration-100 ease-in-out px-6 md:px-[4rem] lg:px-[8rem] py-6 z-[100] pt-8`}>
                 <div className="w-fit">
                     <Link to={`/`} onClick={scrollToTop}>
                         <img src={logo} className="w-[120px] cursor-pointer" alt="" />
@@ -70,14 +70,14 @@ const Navbar = () => {
             </div>
 
             {/* mobile hamburger */}
-            <div className={`w-full flex md:hidden fixed justify-between top-o ${navBg ? 'bg-black' : 'bg-transparent'} transition-all duration-100 ease-in-out px-6 md:px-[4rem] lg:px-[8rem] py-6 z-[100] pt-8`}>
+            <div className={`w-full flex md:hidden fixed justify-between items-center top-o ${navBg ? ' bg-[color:var(--primary-color)]' : 'bg-transparent'} transition-all duration-100 ease-in-out px-6 md:px-[4rem] lg:px-[8rem] z-[20] py-4 rounded-b-[10px]`}>
                 <div className="w-fit">
                     <Link to={`/`}>
-                        <img src={logo} className="w-[120px]" alt="" />
+                        <img src={logo} className="w-[90px]" alt="" />
                     </Link>
                 </div>
                 <div className="w-full flex justify-end md:hidden">
-                    <span className="rounded-full bg-black p-3">
+                    <span className="rounded-full  bg-[color:var(--primary-color)] p-3">
                         <img src={menu} onClick={() => setSidebarToggle(true)} className="w-[35px]" alt="" />
                     </span>
                 </div>
