@@ -14,11 +14,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title }) => {
                     <h1 className={`hidden md:block text-[34px] 2xl:text-[39px] leading-[44px] text-left text-wrap ${title?.length < 30 ? 'w-full max-w-[180px]' : 'w-full max-w-[270px] group-hover:max-w-[400px]'} `}>{title}</h1>
                     <h1 className={`hidden sm:block md:hidden text-[35px] leading-[24px] text-left text-wrap ${title?.length <= 20 ? 'w-full max-w-[150px]' : 'w-full max-w-[240px] group-hover:max-w-[400px]'} `}>{title}</h1>
                     <h1 className={`sm:hidden text-[22px] leading-[26px] text-left text-wrap ${title?.length > 20 ? 'w-full max-w-[120px]' : 'w-full max-w-[200px] group-hover:max-w-[400px]'} `}>{title}</h1>
-                    {/* {title.split('').map((letter, i) => (
-                        <span key={i} className={`text-[22px] leading-[26px] text-left text-wrap whitespace-nowrap`}>
-                            {letter}
-                        </span>
-                    ))} */}
                 </div>
             </div>
         </div>

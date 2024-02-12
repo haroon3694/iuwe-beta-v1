@@ -59,9 +59,6 @@ const Sidebar = () => {
               <ScrollLink to={data?.scroll_link} smooth={true} duration={500} onClick={() => setSidebarToggle(false)} className="cursor-pointer"><p className="text-[25px] font-[500] text-gray-200">{data?.title}</p></ScrollLink>
             ))
           }
-          {/* <Link onClick={() => setSidebarToggle(false)} to='/case-studies'><h1 className="text-[25px] font-[500] text-gray-200">Case Studies</h1></Link>
-          <Link onClick={() => setSidebarToggle(false)} to='/about'><h1 className="text-[25px] font-[500] text-gray-200">About Us</h1></Link>
-          <Link onClick={() => setSidebarToggle(false)} to='/contact'><h1 className="text-[25px] font-[500] text-gray-200">Contact Us</h1></Link> */}
         </div>
       </div>
       <div className={`w-[100vw] h-screen z-30 opacity-0 fixed inset-0 bg-red-300 ${sidebarToggle ? 'block' : 'hidden'}`} onClick={() => setSidebarToggle(false)} />
