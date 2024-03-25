@@ -6,8 +6,8 @@ const AboutSection = () => {
     const aboutData = {
         title: 'About Us',
         content: 'As a premier digital marketing and branding agency, we specialize in crafting compelling narratives and elevating brands to new heights. Our team of creative visionaries, strategic thinkers, and digital experts collaborates seamlessly to transform your brand into a digital powerhouse.',
-        email: 'haroon@iuwe.com',
-        number: '+91 84352 95432',
+        email: 'haroon@iuwe.in',
+        number: '+91 97106 98917',
     }
 
     return (
