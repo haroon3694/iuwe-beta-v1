@@ -3,7 +3,7 @@ import video from '../../assets/videos/video.webm'
 const VideoSection = () => {
 
   const handleButtonClick = () => {
-    window.location.href = 'mailto:example@example.com';
+    window.open('https://calendar.app.google/fXMuexFY9unLyteRA', '_blank')
   };
 
   return (
