@@ -1,6 +1,7 @@
 import logo from '../../assets/images/logo_white.svg'
 import linkedin from '../../assets/icons/linkedin.svg'
 import instagram from '../../assets/icons/instagram.svg'
+import medium from '../../assets/icons/medium.png'
 
 const Footer = () => {
 
@@ -14,6 +15,11 @@ const Footer = () => {
             id: 1,
             icon: linkedin,
             link: 'https://www.linkedin.com/company/iuwe-in/',
+        },
+        {
+            id: 3,
+            icon: medium,
+            link: 'https://iuwe.medium.com/',
         },
     ];
 
